@@ -1,13 +1,15 @@
 import { Outlet } from 'react-router-dom';
+import Header from '@core/layout/components/Header';
+import ToggleSwitchMode from '@shared/components/toggle-witch/ToggleSwitchMode';
 
 const MainLayout = () => {
   return (
-    <div>
-      <h1>Main Layout</h1>
-      <div className="min-h-screen flex justify-center items-center">
-        <h1 className="text-3xl font-bold text-blue-600">Install & Setup Vite + React + Typescript + Tailwind CSS 3</h1>
+    <div className="main-layout">
+      <Header />
+      <div className="main-layout-content">
+        <ToggleSwitchMode />
+        <Outlet />
       </div>
-      <Outlet />
     </div>
   );
 };
